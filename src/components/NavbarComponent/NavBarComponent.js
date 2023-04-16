@@ -9,6 +9,7 @@ export const NavBarComponent = new Component(
   NavbarComponentOptions,
   NavbarPreview,
   {
+    userName: 'XFOLIO.',
     home: 'URL1',
     services: 'URL2',
     projects: 'URL3',

@@ -9,7 +9,8 @@ export const FooterComponent = new Component(
   FooterOptions,
   FooterPreview,
   {
-    userName: 'Kartik Bansal',
+    userName: 'Xfolio.',
+    creator: 'Kartik Bansal',
     home: 'URL1',
     aboutUs: 'URL2',
     contact: 'URL3',

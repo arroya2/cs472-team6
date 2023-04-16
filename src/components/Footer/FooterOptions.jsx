@@ -1,5 +1,14 @@
 export default function FooterOptions({ options, updateComponent }) {
-  let { userName, home, aboutUs, contact, linkedIn, twitter, instagram } = options;
+  let {
+    userName,
+    creator,
+    home,
+    aboutUs,
+    contact,
+    linkedIn,
+    twitter,
+    instagram,
+  } = options;
 
   function handleChange(e) {
     updateComponent({ [e.target.name]: e.target.value });
@@ -7,12 +16,21 @@ export default function FooterOptions({ options, updateComponent }) {
 
   return (
     <div className="p-3">
-      <label className="block">Designed by:</label>
+      <label className="block">Portfolio Name:</label>
       <input
         className={`block mb-3 p-2 rounded-lg bg-gray-200`}
         type="text"
         name="userName"
         value={userName}
+        onChange={handleChange}
+      />
+
+      <label className="block">Designed by:</label>
+      <input
+        className={`block mb-3 p-2 rounded-lg bg-gray-200`}
+        type="text"
+        name="creator"
+        value={creator}
         onChange={handleChange}
       />
 
