@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
 import { registeredComponents } from '../../utils/registeredComponents';
 import { Gradients } from '../../utils/utils';
-import FAQSection from './FAQSection';
+import FAQSection from './faqSection';
 import Accordion from './Accordion'
 
 
