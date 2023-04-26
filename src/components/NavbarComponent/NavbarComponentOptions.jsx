@@ -1,5 +1,5 @@
 export default function NavbarComponentOptions({ options, updateComponent }) {
-  let { home, services, projects, about, blog, letsTalk } = options;
+  let { userName, home, services, projects, about, blog, letsTalk } = options;
 
   function handleChange(e) {
     updateComponent({ [e.target.name]: e.target.value });
@@ -7,6 +7,15 @@ export default function NavbarComponentOptions({ options, updateComponent }) {
 
   return (
     <div className="p-3">
+      <label className="block">Portfolio Name:</label>
+      <input
+        className={`block mb-3 p-2 rounded-lg bg-gray-200`}
+        type="text"
+        name="userName"
+        value={userName}
+        onChange={handleChange}
+      />
+
       <label className="block">Home:</label>
       <input
         className={`block mb-3 p-2 rounded-lg bg-gray-200`}
