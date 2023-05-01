@@ -125,7 +125,6 @@ describe('Testimonial Component', () => {
         )
         testimonialJSON = testTestimonial.toJSON();
         stopColor = (testimonialJSON.children[0].children[0].children[1].children[0].children[0].props.stopColor);
-        console.log(stopColor);
 
         expectedColor = "#000";
 
@@ -148,7 +147,6 @@ describe('Testimonial Component', () => {
         )
         testimonialJSON = testTestimonial.toJSON();
         stopColor = (testimonialJSON.children[0].children[0].children[1].children[0].children[0].props.stopColor);
-        console.log(stopColor);
 
         expectedColor = "#fafafa";
 
@@ -171,7 +169,6 @@ describe('Testimonial Component', () => {
         )
         testimonialJSON = testTestimonial.toJSON();
         stopColor = (testimonialJSON.children[0].children[0].children[1].children[0].children[0].props.stopColor);
-        console.log(stopColor);
 
         expectedColor = "#fafaf9";
 

@@ -4,8 +4,6 @@ import colors from 'tailwindcss/colors'
 function getColorFromGradient(choppedGrad, stop){
     let colorName = choppedGrad[3 * stop + 1];
     let colorNumber = choppedGrad[3 * stop + 2];
-    console.log(choppedGrad);
-  
     //check for default gradient
     if(choppedGrad[1] === "grad1"){
       colorName = choppedGrad[2 * stop + 1]
