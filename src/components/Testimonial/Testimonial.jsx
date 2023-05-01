@@ -5,7 +5,7 @@ import { Gradients } from '../../utils/utils.js';
 function getColorFromGradient(choppedGrad, stop){
     let colorName = choppedGrad[3 * stop + 1];
     let colorNumber = choppedGrad[3 * stop + 2];
-    console.log(colorName);
+    console.log(choppedGrad);
   
     //check for default gradient
     if(choppedGrad[1] === "grad1"){
@@ -18,6 +18,7 @@ function getColorFromGradient(choppedGrad, stop){
       colorName = choppedGrad[3 * stop + 8];
       colorNumber = choppedGrad[3 * stop + 9];
     }
+
     switch(colorName){
         case "grad1":
             return "#B16CEA";
@@ -34,7 +35,7 @@ function getColorFromGradient(choppedGrad, stop){
         case "rose":
             return colors.rose[colorNumber];
         case "black":
-            return colors.black[colorNumber];
+            return colors.black;
         case "amber":
             return colors.amber[colorNumber];
         case "cyan":
