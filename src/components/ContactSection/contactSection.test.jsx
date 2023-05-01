@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { Gradients } from '../../utils/utils';
 import ContactSection from './ContactSection';
 import { registeredComponents } from '../../utils/registeredComponents';
+import colors from 'tailwindcss/colors';
 
 
 describe('Contact Section Component', () => {
@@ -31,7 +32,6 @@ describe('Contact Section Component', () => {
         let email = contact.children[0].children[1].children.shift()
         let phone = contact.children[1].children[1].children.shift();
         
-
         expect(header).eq(options.displayHeader);
         expect(descr).eq(options.displayDescr);
         expect(email).eq(options.uEmail);
@@ -83,5 +83,59 @@ describe('Contact Section Component', () => {
             value: Gradients['green-blue']
         }})
 
+    })
+
+    it('getColorByGradient tests', () => {
+        let options = {
+            uEmail: "youremail@email.com",
+            uPhone: "702-555-5555",
+            displayHeader: "Get In Touch",
+            displayDescr: "Have a project in mind? Looking to partner or work together? Reach out through the form and I'll get back to you in the next 48 hours.",
+            gradient: Gradients.default
+        }
+
+        const testContactInit = renderer.create(
+            <ContactSection options={options}/>
+        )
+        let contactJSON = testContactInit.toJSON();
+        testContactInit.unmount();
+        for(let i=0; i < Object.keys(Gradients).length; i++){
+            options = {
+                uEmail: "youremail@email.com",
+                uPhone: "702-555-5555",
+                displayHeader: "Get In Touch",
+                displayDescr: "Have a project in mind? Looking to partner or work together? Reach out through the form and I'll get back to you in the next 48 hours.",
+                gradient: Object.values(Gradients)[i]
+            }
+            const testContact = renderer.create(
+                <ContactSection options={options}/>
+            )
+            contactJSON = testContact.toJSON();
+            console.log(contactJSON.children[0].children[3].children[0].children[0].children[1].children[0].children[0]);
+            const stopColor = (contactJSON.children[0].children[3].children[0].children[0].children[1].children[0].children[0].props.stopColor);
+
+            let tailwindColor = Object.values(Gradients)[i].split(" ");
+            let expectedColor = "none selected yet";
+            if(tailwindColor[0] === "from-grad1"){
+                expect(stopColor).eq("#B16CEA");
+            }  else if(tailwindColor[0].split("-")[0] != "from" && tailwindColor[0].split("-")[0] != "to"){
+            }
+            else{
+                let expectedColorStatement = tailwindColor[0].split("-");
+                let expectedColorName = expectedColorStatement[1];
+                let expectedColorNumber = expectedColorStatement[2];
+
+                for(let j = 0; j < Object.values(colors).length; j++){
+                    if(Object.keys(colors)[j] === expectedColorName){
+                        for(let k = 0; k < Object.keys(Object.values(colors)[j]).length; k++){
+                            if((Object.keys(Object.values(colors)[j]))[k] === expectedColorNumber){
+                                expectedColor = Object.values(Object.values(colors)[j])[k];
+                            }
+                        }
+                    }
+                }
+            }
+            testContact.unmount();
+        }
     })
 })
