@@ -30,15 +30,9 @@ describe('Contact Section Component', () => {
 
         let header= leftWrapper.children[0].children.shift()
         let descr = leftWrapper.children[2].children.shift();
-<<<<<<< HEAD
-        let email = contact.children[0].children[1].children.shift()
-        let phone = contact.children[1].children[1].children.shift();
-        
-=======
         let email = contact.children[0].children[1].children[0]
         let phone = contact.children[1].children[1].children[0];
 
->>>>>>> main
         expect(header).eq(options.displayHeader);
         expect(descr).eq(options.displayDescr);
         expect(email).eq(options.uEmail);
@@ -118,7 +112,6 @@ describe('Contact Section Component', () => {
                 <ContactSection options={options}/>
             )
             contactJSON = testContact.toJSON();
-            console.log(contactJSON.children[0].children[3].children[0].children[0].children[1].children[0].children[0]);
             const stopColor = (contactJSON.children[0].children[3].children[0].children[0].children[1].children[0].children[0].props.stopColor);
 
             let tailwindColor = Object.values(Gradients)[i].split(" ");
