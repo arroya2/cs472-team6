@@ -24,17 +24,10 @@ export const registeredComponents = new Map([
   ['About Head Images', AboutHeadImages],
   ['About Head Section', AboutHeadSection],
   ['Banner', Banner],
-<<<<<<< HEAD
-  ['Blog Page', BlogPage],
-  // ['Companies', Companies],
-  ['Contact Section', ContactSection],
-  ['Call to Action Section', CtaSection],
-=======
   //['Blog Page', BlogPage],
   // ['Companies', Companies],
   ['ContactSection', ContactSection],
   //['Call to Action Section', CtaSection],
->>>>>>> main
   ['Education and Work', EducationWorkExperience],
   // ['FAQ', faqSection],
   ['Footer', Footer],
