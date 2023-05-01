@@ -1,5 +1,4 @@
 import Testimonial from "../Testimonial/Testimonial";
-import { Gradients } from "../../utils/utils";
 import React from "react";
 
 

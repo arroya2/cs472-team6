@@ -1,6 +1,5 @@
 //import starSVG from "./star.svg";
 import colors from 'tailwindcss/colors'
-import { Gradients } from '../../utils/utils.js';
 
 function getColorFromGradient(choppedGrad, stop){
     let colorName = choppedGrad[3 * stop + 1];
