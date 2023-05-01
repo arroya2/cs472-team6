@@ -1,18 +1,21 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
+import { Gradients } from '../../utils/utils';
 import Footer from './Footer';
 import FooterOptions from './FooterOptions';
 import { registeredComponents } from '../../utils/registeredComponents';
 
 let options = {
-  userName: 'Kartik Bansal',
+  userName: 'Xfolio.',
+  creator: 'Kartik Bansal',
   home: 'URL1',
   aboutUs: 'URL2',
   contact: 'URL3',
   linkedIn: 'URL4',
   twitter: 'URL5',
   instagram: 'URL6',
+  gradient: Gradients.default,
 };
 
 describe('Footer Component', () => {
@@ -22,11 +25,11 @@ describe('Footer Component', () => {
 
     // get component renders
     let renderedComponentJSON = component.toJSON();
-    let renderedUserName =
+    let renderedCreator =
       renderedComponentJSON.children[0].children[0].children[1].children[1];
 
     // check for matches
-    expect(renderedUserName).eq(options.userName);
+    expect(renderedCreator).eq(options.creator);
   });
 
   it('FooterOptions show correct input values', () => {
@@ -44,15 +47,20 @@ describe('Footer Component', () => {
 
     // get the input components from the json
     let userNameInput = optionsComponentJSON.children[1];
-    let homeInput = optionsComponentJSON.children[3];
-    let aboutUsInput = optionsComponentJSON.children[5];
-    let contactInput = optionsComponentJSON.children[7];
-    let linkedInInput = optionsComponentJSON.children[9];
-    let twitterInput = optionsComponentJSON.children[11];
-    let instagramInput = optionsComponentJSON.children[13];
+    let creatorInput = optionsComponentJSON.children[3];
+    let homeInput = optionsComponentJSON.children[5];
+    let aboutUsInput = optionsComponentJSON.children[7];
+    let contactInput = optionsComponentJSON.children[9];
+    let linkedInInput = optionsComponentJSON.children[11];
+    let twitterInput = optionsComponentJSON.children[13];
+    let instagramInput = optionsComponentJSON.children[15];
+    let gradientInput = optionsComponentJSON.children[17];
 
     // make sure that the value of the userName input was set properly
     expect(userNameInput.props.value).eq(defaultOptions.userName);
+
+    // make sure that the value of the creator input was set properly
+    expect(creatorInput.props.value).eq(defaultOptions.creator);
 
     // make sure that the value of the home input was set properly
     expect(homeInput.props.value).eq(defaultOptions.home);
@@ -71,6 +79,9 @@ describe('Footer Component', () => {
 
     // make sure that the value of the instagram input was set properly
     expect(instagramInput.props.value).eq(defaultOptions.instagram);
+
+    // make sure that the value of the gradient input was set properly
+    expect(gradientInput.props.value).eq(defaultOptions.gradient);
   });
 
   it('FooterOptions handleChange function', () => {
@@ -83,7 +94,7 @@ describe('Footer Component', () => {
         options={options}
         updateComponent={(change) =>
           expect(JSON.stringify(change)).eq(
-            JSON.stringify({ userName: 'New Text' })
+            JSON.stringify({ creator: 'New Text' })
           )
         }
       />
@@ -95,7 +106,7 @@ describe('Footer Component', () => {
     // simulate a input change, specifically the gradient changing
     handleChange({
       target: {
-        name: 'userName',
+        name: 'creator',
         value: 'New Text',
       },
     });

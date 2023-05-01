@@ -17,7 +17,7 @@ export const HomeHeroSectionComponent = new Component(
             {text: "GET IN TOUCH", link: "https://www.google.com/"},
             {text: "VIEW ALL WORKS", link: "https://www.google.com/"}
         ],
-        photo: "/src/components/HomeHeroSection/photo.jpg",
+        photo: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/HomeHeroSection/photo.jpg",
         gradient: Gradients.default
     }
 )

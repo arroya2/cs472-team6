@@ -24,6 +24,12 @@ export const ExportModalState = create((set) => ({
   setLoading: (loading) => set(() => ({ loading }))
 }))
 
+
+export const InfoModalState = create((set) => ({
+    visible: false,
+    setVisible: (visible) => set(() => ({ visible })),
+}))
+
 export const PageState = create((set) => ({
     componentsList: [],
     pageOptions: new PageOptions({}),

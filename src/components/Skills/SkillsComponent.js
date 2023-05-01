@@ -13,11 +13,11 @@ export const SkillsComponent = new Component(
         title: 'What I Do.',
         noOfSkills: 5,
         skillsList: [
-            {name: "Figma", image: "/src/components/Skills/SampleLogos/figma.png"},
-            {name: "Photoshop", image: "/src/components/Skills/SampleLogos/photoshop.png"},
-            {name: "HTML", image: "/src/components/Skills/SampleLogos/html.png"},
-            {name: "Webflow", image: "/src/components/Skills/SampleLogos/webflow.png"},
-            {name: "SEQ", image: "/src/components/Skills/SampleLogos/seo.png"}
+            {name: "Figma", image: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/Skills/figma.png"},
+            {name: "Photoshop", image: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/Skills/photoshop.png"},
+            {name: "HTML", image: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/Skills/html.png"},
+            {name: "Webflow", image: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/Skills/webflow.png"},
+            {name: "SEQ", image: "https://raw.githubusercontent.com/cs472-team6/cs472-team6-resources/main/images/Skills/seo.png"}
         ]
     }
 )

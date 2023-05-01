@@ -1,21 +1,20 @@
-// import { useState } from "react";
 import { Gradients } from "../../utils/utils";
+import ImageInput from "../ImageInput/ImageInput";
 
-export default function SmOptions({options, updateComponent}){
-    let {title, body, image, gradient, FbLink, LiLink, TwLink, InLink, DrLink, BhLink} = options;
+
+export default function SocialMediaOption({options, updateComponent}){
+    let {title, body, imageUrl, gradient, socials, socialCount} = options;
 
     function handleChange(e) {
         updateComponent({ [e.target.name]: e.target.value});
     }
-    // const [checked, setChecked] = React.useState(false);
-    // const handleSChange = () =>{
-    //     setChecked(!checked);
-    // }
 
-    // const Checkbox = () =>{
-    //     const [isChecked, setIsChecked] = useState(false);
-    // }
+    function handleSocialChange(index, e){
+        let newSocial = [...socials];
+        newSocial[index] = {...newSocial[index], [e.target.name]: e.target.value};
 
+        updateComponent({socials: newSocial})
+    }
 
     
     return (
@@ -29,40 +28,34 @@ export default function SmOptions({options, updateComponent}){
             </select>
             <label className="block">Body:</label>
             <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="body" value={body} onChange={(handleChange)} />
-            
-            {/* <div className="checkbox-wrapper">
-                <label>
-                    <input type="checkbox"
-                    // checked={isChecked}
-                    //  onChange={handleSChange}
-                    />
-                Links?
-                </label>
-            </div> */}
+            {/* <label className="block">Image Link:</label> */}
+            <ImageInput label="Image" value={imageUrl} name="imageUrl" handleChange={(e) => handleChange(e)} />
+
+            {/* <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="image" value={image} onChange={(handleChange)} /> */}
             
             <details>
-                <summary>links</summary>
-                <label className="block">Image Link:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="image" value={image} onChange={(handleChange)} />
-
-                <label className="block">Facebook Link:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="FbLink" value={FbLink} onChange={(handleChange)} />
-
-                <label className="block">Linkedin Link:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="LiLink" value={LiLink} onChange={(handleChange)} />
-
-                <label className="block">Twitter Link:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="TwLink" value={TwLink} onChange={(handleChange)} />
-
-                <label className="block">Instagram Link:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="InLink" value={InLink} onChange={(handleChange)} />
-
-                <label className="block">Dribble Link:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="DrLink" value={DrLink} onChange={(handleChange)} />
-
-                <label className="block">Behance Link:</label>
-                <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="BhLink" value={BhLink} onChange={(handleChange)} />
+            <summary>Socials Options</summary>
+            <label className="block">Number of Socials</label>
+            <input className="block mb-3 p-2 rounded-lg bg-gray-200" type="number" name="socialCount" value={socialCount} min="0" max="6" onChange={(handleChange)}/>
+            {socials.slice(0,socialCount).map((social, index) => {
+                    return(
+                        <SocialMediaOptions key={index} index={index} social={social} handleSocialChange={handleSocialChange}/>
+                    )
+                })}
             </details>
         </div>
+    )
+}
+function SocialMediaOptions({social, index, handleSocialChange}) {
+    const {imagelink, link} = social;
+    return (
+        <details>
+            <summary>Socials {index + 1}</summary>
+            <label className="block"></label>
+            <ImageInput label="Image" value={imagelink} name="imagelink" handleChange={(e) => handleSocialChange(index, e)} />
+            {/* <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="image" value={image} onChange={e => handleSocialChange(index, e)} /> */}
+            <label className="block">Reference Link:</label>
+            <input className={'block mb-3 p-2 rounded-lg bg-gray-200'} type="text" name="link" value={link} onChange={e => handleSocialChange(index, e)} />            
+        </details>
     )
 }

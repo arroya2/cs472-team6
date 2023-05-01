@@ -1,32 +1,30 @@
 import colors from "tailwindcss/colors";
-
 export default function CtaSection({options}) {
   const {link, word1, word2, gradient} = options;
-
   let choppedGradient = gradient.split(/-| /);
-  
   return (
-    <div className={`bg-white text-black dark:bg-black dark:text-white`}>
-    <div className={'py-20 px-20 md:px-20 sm:px-20'}>
-    <div className="font-bold font-baijamjuree
-    lg:text-6xl lg:leading-non
-    md:text-5xl md:leading-tight
-    sm:font-semibold sm:text-lg sm:leading-relaxed">
-        <h2>{word1}</h2> 
-        <div className = {`bg-white dark:bg-black`}>
-        <div className = {`bg-gradient-to-r ${gradient} text-transparent bg-clip-text flex items-center`}>
-        {link.trim() ? <a href={link}className= 'flex items-center font-bold font-main flex-wrap mt-2 mb-2 lg:text-6xl lg:leading-non md:text-5xl md:leading-tight sm:font-medium sm:text-2xl sm:leading-relaxed'>{word2} 
-          <svg className="w-6 h-6 md:w-14 md:h-14 lg:w-18 lg:h-18" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 68L66.5845 5.41551M13.9664 4L66.5859 5.41403L67.9999 58.0336" stroke="url(#paint0_linear_228_503)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_228_503" x1="4" y1="35.9009" x2="67.9999" y2="35.9009" gradientUnits="userSpaceOnUse">
-<stop offset="0.140625" stopColor={`${getColorFromGradient(choppedGradient, 0)}`}/>
-<stop offset="1" stopColor={`${getColorFromGradient(choppedGradient, choppedGradient[1] === "grad1" ? (choppedGradient.length / 2 - 1) :(choppedGradient.length / 3 - 1))}`}/>
-</linearGradient>
-</defs>
-</svg></a> : null}
-        </div>
-      </div>
+    <div className={`flex bg-white text-black dark:bg-black dark:text-white lg:max-w-[1036px] md:max-w-[864px] max-w-[340px] mx-auto item-center`}>
+    <div className={'py-20 px-[25px] md:px-[80px]'}>
+    <div className="font-bold font-main
+    lg:text-5xl
+    md:text-4xl 
+    text-[22px]">
+    <h2>{word1}</h2> 
+    <div className = {`bg-white dark:bg-black`}>
+    <div className = {`bg-gradient-to-r ${gradient} text-transparent bg-clip-text flex items-center`}>
+    <a href={link.trim() ? link : '#0'}className= 'flex items-center font-bold font-main flex-wrap mt-2 mb-2 lg:text-5xl md:text-4xl text-[26px]'>{word2}
+    <svg className="w-6 h-6 md:w-14 md:h-14 lg:w-18 lg:h-18" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 68L66.5845 5.41551M13.9664 4L66.5859 5.41403L67.9999 58.0336" stroke="url(#paint0_linear_228_503)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+    <defs>
+    <linearGradient id="paint0_linear_228_503" x1="4" y1="35.9009" x2="67.9999" y2="35.9009" gradientUnits="userSpaceOnUse">
+    <stop offset="0.140625" stopColor={`${getColorFromGradient(choppedGradient, 0)}`}/>
+    <stop offset="1" stopColor={`${getColorFromGradient(choppedGradient, choppedGradient[1] === "grad1" ? (choppedGradient.length / 2 - 1) :(choppedGradient.length / 3 - 1))}`}/>
+    </linearGradient>
+    </defs>
+    </svg>
+    </a>
+    </div>
+    </div>
     </div>
     </div>
     </div>

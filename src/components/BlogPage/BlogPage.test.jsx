@@ -8,8 +8,8 @@ import { registeredComponents } from '../../utils/registeredComponents';
 describe('BlogPage Component', () => {
     it('Text renders properly', () => {
         let options = {
-            overview: "Overview",
-            paragraph1: "example\nexample1\nexample2", 
+            header: "Overview",
+            paragraph: "example\nexample1\nexample2", 
             image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         }
 
@@ -24,7 +24,7 @@ describe('BlogPage Component', () => {
         displayedWords = displayedWords.children[0].children[0].children;
 
         // expect the rendered/displayed words to match the options passed into the component
-        expect(displayedWords[0]).eq(options.overview);
+        expect(displayedWords[0]).eq(options.header);
 
     })
 
@@ -43,14 +43,14 @@ describe('BlogPage Component', () => {
         let optionsComponentJSON = component.toJSON();
 
         // get the input components from the json
-        let overviewInput = optionsComponentJSON.children[1];
-        let paragraph1Input = optionsComponentJSON.children[3];
+        let headerInput = optionsComponentJSON.children[1];
+        let paragraphInput = optionsComponentJSON.children[3];
         let imageInput = optionsComponentJSON.children[5];
 
         // make sure that the value of the overview input was set properly
-        expect(overviewInput.props.value).eq(defaultOptions.overview);
+        expect(headerInput.props.value).eq(defaultOptions.header);
         // make sure that the value of the paragrph1 input was set properly
-        expect(paragraph1Input.props.value).eq(defaultOptions.paragraph1);
+        expect(paragraphInput.props.value).eq(defaultOptions.paragraph);
         // make sure that the value of the image input was set properly
         expect(imageInput.props.value).eq(defaultOptions.image);
     })
@@ -63,7 +63,7 @@ describe('BlogPage Component', () => {
 
         // create test object that the input handler should match
         const changeTest = {
-            overview:"overview"
+            header:"overview"
         }
 
         // render the CtaSectionOptions component
@@ -77,7 +77,7 @@ describe('BlogPage Component', () => {
 
         // simulate a input change, specifically the gradient changing
         handleChange({target: {
-            name: 'overview',
+            name: 'header',
             value: 'overview'
         }})
     })

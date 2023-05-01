@@ -18,7 +18,7 @@ describe('AboutHeadImages Component', () => {
         )
 
         let optionsComponentJSON = component.toJSON();
-        console.log(optionsComponentJSON.children[7]);
+        // console.log(optionsComponentJSON.children[7]);
         // get the input components from the json
         let image1Input = optionsComponentJSON.children[1];
         let image2Input = optionsComponentJSON.children[3];
