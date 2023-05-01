@@ -21,27 +21,27 @@ const srcFiles = [
 ]
 
 const componentFiles = new Map([
-  ['Four Zero Four', [
+  ['FourZeroFour', [
     'src/components/404Section/FourZeroFour.jsx',
     'src/components/404Section/404_img.png'
   ]],
-  ['About Head Images', [
+  ['AboutHeadImages', [
     'src/components/AboutHeadImages/AboutHeadImages.jsx'
   ]],
-  ['About Head Section', [
+  ['AboutHeadSection', [
     'src/components/AboutHeadSection/AboutHeadSection.jsx'
   ]],
   ['Banner', [
     'src/components/Banner/Banner.jsx',
     'src/components/Banner/star.svg'
   ]],
-  ['Blog Page', [
+  ['BlogPage', [
     'src/components/BlogPage/BlogPage.jsx'
   ]],
   // ['Companies', [
   //   'src/components/Companies/Companies.jsx'
   // ]],
-  ['Contact Section', [
+  ['ContactSection', [
     'src/components/ContactSection/ContactSection.jsx',
     'src/components/ContactSection/emailIcon.svg',
     'src/components/ContactSection/phoneIcon.svg',
@@ -50,34 +50,34 @@ const componentFiles = new Map([
     'src/components/ContactSection/blackMiniDollarSign.svg',
     'src/components/ContactSection/blackMiniEmail.svg'
   ]],
-  ['Call to Action Section', [
+  ['CtaSection', [
     'src/components/CtaSection/CtaSection.jsx'
   ]],
-  ['Education And Work', [
+  ['EducationAndWork', [
     'src/components/EducationAndWork/EducationAndWork.jsx'
   ]],
   ['Footer', [
     'src/components/Footer/Footer.jsx'
   ]],
-  ['More Articles Section', [
+  ['MoreArticles', [
     'src/components/MoreArticles/MoreArticles.jsx'
   ]],
-  ['Navbar', [
+  ['NavbarComponent', [
     'src/components/NavbarComponent/NavbarComponent.jsx'
   ]],
-  ['Services Section', [
+  ['ServicesSection', [
     'src/components/ServicesSection/ServicesSection.jsx'
   ]],
-  ['Service Wrapper', [
+  ['ServiceWrapper', [
     'src/components/ServiceWrapper/ServiceWrapper.jsx'
   ]],
   ['Skills', [
     'src/components/Skills/Skills.jsx'
   ]],
-  ['Social Media', [
+  ['SocialMedia', [
     'src/components/SocialMedia/SocialMedia.jsx'
   ]],
-  ['Stats Section', [
+  ['StatsSection', [
     'src/components/StatsWrapper/StatsWrapper.jsx'
   ]],
   ['Testimonial', [
