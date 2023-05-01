@@ -51,8 +51,7 @@ const componentFiles = new Map([
     'src/components/ContactSection/blackMiniEmail.svg'
   ]],
   ['Call to Action Section', [
-    'src/components/CtaSection/CtaSection.jsx',
-    'src/components/CtaSection/vector.svg'
+    'src/components/CtaSection/CtaSection.jsx'
   ]],
   ['Education And Work', [
     'src/components/EducationAndWork/EducationAndWork.jsx'
