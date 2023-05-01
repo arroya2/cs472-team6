@@ -12,9 +12,9 @@ export default function Accordion({question, answer}){
 
     return(
         <div className="flex items-center justify-between">
-            <div className="lg:w-[97%] md:w-[95%] w-[94%]" id="accordion">
+            <div className="lg:w-[100%] md:w-[95%] w-[100%]" id="accordion">
                 <div id="accordion1" className="flex items-center justify-between 
-                h-16 w-auto 
+                h-16 w-[100%] 
                 border-b border-gray-300 dark:border-white dark:border-opacity-40 
                 font-main text-lg text-black dark:text-white cursor-pointer" onClick={() => setIsActive(!isActive)}>
                     <span>{question}</span>

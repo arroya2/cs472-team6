@@ -21,6 +21,7 @@ export const faqComponent = new Component(
       q5:'Will my website load quickly?',
       ans5:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente laborum cupiditate pssimus labore, hic temporibus velit dicta earum suscpiti commodi eum enim atque at? Et perspiciatis dolor irue volupatem.',
       gradient: Gradients.default,
-      contactBttn:"Contact Me"
+      contactBttn:"Contact Me",
+      contactLink:"https://www.google.com"
     }
 );
