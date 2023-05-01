@@ -35,9 +35,9 @@ const componentFiles = new Map([
     'src/components/Banner/Banner.jsx',
     'src/components/Banner/star.svg'
   ]],
-  //['BlogPage', [
-  //  'src/components/BlogPage/BlogPage.jsx'
-  //]],
+  ['BlogPage', [
+    'src/components/BlogPage/BlogPage.jsx'
+  ]],
   // ['Companies', [
   //   'src/components/Companies/Companies.jsx'
   // ]],
@@ -50,9 +50,9 @@ const componentFiles = new Map([
     'src/components/ContactSection/blackMiniDollarSign.svg',
     'src/components/ContactSection/blackMiniEmail.svg'
   ]],
-  //['CtaSection', [
-  // 'src/components/CtaSection/CtaSection.jsx'
-  //]],
+  ['CtaSection', [
+    'src/components/CtaSection/CtaSection.jsx'
+  ]],
   ['EducationAndWork', [
     'src/components/EducationAndWork/EducationAndWork.jsx'
   ]],
