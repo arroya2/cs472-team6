@@ -21,27 +21,27 @@ const srcFiles = [
 ]
 
 const componentFiles = new Map([
-  ['404Section', [
+  ['Four Zero Four', [
     'src/components/404Section/FourZeroFour.jsx',
     'src/components/404Section/404_img.png'
   ]],
-  ['AboutHeadImages', [
+  ['About Head Images', [
     'src/components/AboutHeadImages/AboutHeadImages.jsx'
   ]],
-  ['AboutHeadSection', [
+  ['About Head Section', [
     'src/components/AboutHeadSection/AboutHeadSection.jsx'
   ]],
   ['Banner', [
     'src/components/Banner/Banner.jsx',
     'src/components/Banner/star.svg'
   ]],
-  ['BlogPage', [
+  ['Blog Page', [
     'src/components/BlogPage/BlogPage.jsx'
   ]],
   // ['Companies', [
   //   'src/components/Companies/Companies.jsx'
   // ]],
-  ['ContactSection', [
+  ['Contact Section', [
     'src/components/ContactSection/ContactSection.jsx',
     'src/components/ContactSection/emailIcon.svg',
     'src/components/ContactSection/phoneIcon.svg',
@@ -50,35 +50,35 @@ const componentFiles = new Map([
     'src/components/ContactSection/blackMiniDollarSign.svg',
     'src/components/ContactSection/blackMiniEmail.svg'
   ]],
-  ['CtaSection', [
+  ['Call to Action Section', [
     'src/components/CtaSection/CtaSection.jsx',
     'src/components/CtaSection/vector.svg'
   ]],
-  ['EducationAndWork', [
+  ['Education And Work', [
     'src/components/EducationAndWork/EducationAndWork.jsx'
   ]],
   ['Footer', [
     'src/components/Footer/Footer.jsx'
   ]],
-  ['MoreArticles', [
+  ['More Articles Section', [
     'src/components/MoreArticles/MoreArticles.jsx'
   ]],
-  ['NavbarComponent', [
+  ['Navbar', [
     'src/components/NavbarComponent/NavbarComponent.jsx'
   ]],
-  ['ServicesSection', [
+  ['Services Section', [
     'src/components/ServicesSection/ServicesSection.jsx'
   ]],
-  ['ServiceWrapper', [
+  ['Service Wrapper', [
     'src/components/ServiceWrapper/ServiceWrapper.jsx'
   ]],
   ['Skills', [
     'src/components/Skills/Skills.jsx'
   ]],
-  ['SocialMedia', [
+  ['Social Media', [
     'src/components/SocialMedia/SocialMedia.jsx'
   ]],
-  ['StatsWrapper', [
+  ['Stats Section', [
     'src/components/StatsWrapper/StatsWrapper.jsx'
   ]],
   ['Testimonial', [

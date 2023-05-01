@@ -17,25 +17,27 @@ import Skills from './components/Skills/Skills';
 // import faqSection from './components/faqSection/faqSection';
 import MoreArticles from './components/MoreArticles/MoreArticles';
 import ServicesSection from './components/ServicesSection/ServicesSection';
+import TestimonialSection from '../src/components/TestimonialSection/TestimonialSection';
 
 export const registeredComponents = new Map([
   ['Four Zero Four', FourZeroFourSection],
-  ['AboutHeadImages', AboutHeadImages],
-  ['AboutHeadSection', AboutHeadSection],
+  ['About Head Images', AboutHeadImages],
+  ['About Head Section', AboutHeadSection],
   ['Banner', Banner],
-  ['BlogPage', BlogPage],
+  ['Blog Page', BlogPage],
   // ['Companies', Companies],
-  ['ContactSection', ContactSection],
-  ['CtaSection', CtaSection],
+  ['Contact Section', ContactSection],
+  ['Call to Action Section', CtaSection],
   ['Education and Work', EducationWorkExperience],
   // ['FAQ', faqSection],
   ['Footer', Footer],
-  ['MoreArticles',  MoreArticles],
+  ['More Articles Section',  MoreArticles],
   ['Navbar', Navbar],
   ['Services Section', ServicesSection],
   ['Service Wrapper', ServiceWrapper],
   ['Skills', Skills],
-  ['SocialMedia', Sm],
+  ['Social Media', Sm],
   ['Stats Section', StatsWrapper],
-  ['Testimonial', Testimonial]
+  ['Testimonial', Testimonial],
+  ['Testimonial Section', TestimonialSection]
 ]);
