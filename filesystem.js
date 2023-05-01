@@ -21,7 +21,7 @@ const srcFiles = [
 ]
 
 const componentFiles = new Map([
-  ['FourZeroFour', [
+  ['404Section', [
     'src/components/404Section/FourZeroFour.jsx',
     'src/components/404Section/404_img.png'
   ]],
@@ -77,7 +77,7 @@ const componentFiles = new Map([
   ['SocialMedia', [
     'src/components/SocialMedia/SocialMedia.jsx'
   ]],
-  ['StatsSection', [
+  ['StatsWrapper', [
     'src/components/StatsWrapper/StatsWrapper.jsx'
   ]],
   ['Testimonial', [
